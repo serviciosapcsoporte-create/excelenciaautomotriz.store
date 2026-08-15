@@ -2,7 +2,7 @@
 
 > Sitio: `https://serviciosapcsoporte-create.github.io/excelenciaautomotriz.store/`
 > Dominio futuro: excelenciaautomotriz.store
-> WhatsApp/CTA: 3204420417 | Dirección: Cra. 56 #14, Puente Aranda, Bogotá
+> WhatsApp/CTA: 3204420417 | Dirección: Cra. 56 #14-56, Puente Aranda, Bogotá
 > Modelo: negocio local de servicio (plantilla local-service)
 
 ---
@@ -16,7 +16,7 @@ Posicionar Excelencia Automotriz como el proveedor local de baterías Willard a 
 ```
 /
 ├── index.html                     # Home — "Batería a Domicilio Bogotá" (HEAD 50k) + LocalBusiness
-├── puente-aranda.html             # 🎯 FOCO — "Batería a Domicilio Puente Aranda" (Cra. 56 #14)
+├── puente-aranda.html             # 🎯 FOCO — "Batería a Domicilio Puente Aranda" (Cra. 56 #14-56)
 ├── willard.html                   # Baterías Willard + referencias (31H/31T/4D/8D/NS40) + garantía 12m + precios
 ├── baterias-a-domicilio.html      # Servicio 24h / 30 min + cobertura + desvare
 ├── marcas-vehiculos.html          # Guía por modelo (Hilux, Tucson, Sportage, Duster, SUV, camioneta)
@@ -37,7 +37,7 @@ Posicionar Excelencia Automotriz como el proveedor local de baterías Willard a 
 | Página | Schema |
 |---|---|
 | Home | LocalBusiness + Organization + FAQPage |
-| Puente Aranda | LocalBusiness (geo Cra. 56 #14) + Service + FAQPage |
+| Puente Aranda | LocalBusiness (geo Cra. 56 #14-56) + Service + FAQPage |
 | Willard | Product (Willard) + LocalBusiness + FAQPage |
 | Servicios | Service + LocalBusiness |
 | Localidades | LocalBusiness (areaServed) |

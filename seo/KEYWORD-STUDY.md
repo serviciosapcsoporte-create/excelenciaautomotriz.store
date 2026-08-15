@@ -34,7 +34,7 @@
 | `batería willard suba` | Página localidad |
 | `batería willard soacha` | Página localidad (municipio aledaño) |
 | `batería willard 24 horas` | Servicio |
-| **`batería a domicilio puente aranda`** | 🎯 **FOCO PRINCIPAL** (Cra. 56 #14) |
+| **`batería a domicilio puente aranda`** | 🎯 **FOCO PRINCIPAL** (Cra. 56 #14-56) |
 | `baterías a domicilio puente aranda bogota` | 🎯 variante |
 
 ## 3. Keywords de producto Willard (comerciales)
