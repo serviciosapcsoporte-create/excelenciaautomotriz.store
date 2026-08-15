@@ -9,70 +9,135 @@
 </head>
 <body>
 
+  <!-- Barra superior dorada -->
+    <!-- Barra superior dorada -->
+  <div class="topbar">
+    <span>🚚 Domicilio 30 min GRATIS Bogotá y Cundinamarca</span>
+    <span class="tb-sep"></span>
+    <span>Desde $230.000 c/usada</span>
+    <span class="tb-sep"></span>
+    <span>12 meses garantía Willard</span>
+  </div>
+
+  <!-- Header -->
   <header>
     <div class="navbar">
-      <a class="logo" href="index.html">Excelencia Automotriz</a>
+      <a class="brand" href="index.html">
+        <div class="brand-mark">EA</div>
+        <div>
+          <div class="brand-name">EXCELENCIA AUTOMOTRIZ</div>
+          <div class="brand-sub"><span class="dot"></span> Willard Extrema Oficial</div>
+        </div>
+      </a>
       <nav class="nav-links">
         <a href="index.html">Inicio</a>
+        <a href="willard.html">Precios Willard</a>
         <a href="puente-aranda.html">Puente Aranda</a>
-        <a href="willard.html">Willard</a>
+        <a href="baterias-a-domicilio.html">A Domicilio</a>
         <a href="comparativas.html" class="active">Comparativas</a>
         <a href="blog.html">Blog</a>
         <a href="contacto.html">Contacto</a>
       </nav>
+      <a class="cta-top wa" href="https://wa.me/573204420417?text=Hola%20Excelencia%2C%20cotizo%20bater%C3%ADa%20Willard">
+        WhatsApp
+      </a>
     </div>
   </header>
 
   <nav class="breadcrumb"><a href="index.html">Inicio</a> › Comparativas</nav>
 
-  <section class="hero small-hero">
-    <h1>Willard vs Flash Battery vs Homecenter</h1>
-    <p>¿Cuál batería conviene en Bogotá? Comparamos garantía, precio, amperaje y servicio a domicilio para que decidas con datos.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-blob"></div>
+    <div class="hero-grid">
+      <div>
+        <h1>Willard vs <span class="hl">Flash Battery</span> vs Homecenter</h1>
+        <p class="sub">¿Cuál batería conviene en Bogotá? Comparamos garantía, precio, amperaje y servicio a domicilio con datos reales para que decidas.</p>
+        <div class="stats">
+          <span class="stat">⚡ Misma batería 36/750</span>
+          <span class="stat">💰 Ahorras hasta $153K</span>
+          <span class="stat">🚚 Domicilio incluido</span>
+        </div>
+      </div>
+      <div class="battery-wrap">
+        <img class="battery-img" src="img/bateria-3d.webp" alt="Comparativa baterías Willard Bogotá" loading="eager">
+      </div>
+    </div>
   </section>
 
-  <section class="section">
-    <h2 class="text-2xl mb-4 text-gold">Comparativa rápida</h2>
-    <div class="max-w-2xl">
+  <!-- Comparativa tiendas -->
+  <section class="section" id="tiendas">
+    <div class="section-header">
+      <span class="kicker">MISMA BATERÍA 36/750</span>
+      <h2>¿Dónde conviene comprar?</h2>
+      <p>Mismo día, mismo barrio, misma batería Willard. Precios de referencia del mercado.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card"><div class="tag">Homecenter</div><h3>$437.900</h3><p class="strike" style="color:#64748B;">sin usada</p><p style="font-size:12px;color:#64748B;">Sin instalación</p></div>
+      <div class="card"><div class="tag">Peláez Hermanos</div><h3>$518.711</h3><p style="font-size:12px;color:#64748B;">$80K más cara</p></div>
+      <div class="card"><div class="tag">Flash Battery</div><h3>$490.000</h3><p style="font-size:12px;color:#64748B;">Sin domicilio gratis</p></div>
+      <div class="card gold"><div class="tag green">EXCELENCIA AUTOMOTRIZ</div><h3>$365.000</h3><p style="color:#047857;font-weight:800;">con usada</p><p style="font-size:12px;color:#64748B;">Instalación + domicilio + usada</p></div>
+    </div>
+  </section>
+
+  <!-- Comparativa rápida -->
+  <section class="section" id="tabla">
+    <div class="section-header">
+      <span class="kicker">COMPARATIVA RÁPIDA</span>
+      <h2>Willard Extrema vs otros</h2>
+    </div>
+    <div class="table-wrap max-w-3xl">
       <table>
         <thead><tr><th>Característica</th><th>Willard Extrema</th><th>Flash Battery</th><th>Homecenter</th></tr></thead>
         <tbody>
           <tr><td>Tipo</td><td>Calcio-calcio premium</td><td>Preferida para arranque</td><td>Básica</td></tr>
-          <tr><td>Garantía</td><td class="highlight">12 meses con cambio</td><td>Varía por punto</td><td>Varía</td></tr>
-          <tr><td>Servicio a domicilio</td><td class="highlight">Sí, 30 min</td><td>Solo en sedes</td><td>No (recogida)</td></tr>
-          <tr><td>Recogen usada</td><td class="highlight">Sí + descuento</td><td>En sede</td><td>En tienda</td></tr>
-          <tr><td>Precio orientativo</td><td class="highlight">Competitivo</td><td>Mayor por marca</td><td>Sin instalación</td></tr>
+          <tr><td>Garantía</td><td class="usada">12 meses con cambio</td><td>Varía por punto</td><td>Varía</td></tr>
+          <tr><td>Servicio a domicilio</td><td class="usada">Sí, 30 min GRATIS</td><td>Solo en sedes</td><td>No (recogida)</td></tr>
+          <tr><td>Recogen usada</td><td class="usada">Sí + descuento</td><td>En sede</td><td>En tienda</td></tr>
+          <tr><td>Precio 36/750</td><td class="usada">$365.000 con usada</td><td>$490.000</td><td>$437.900</td></tr>
         </tbody>
       </table>
-      <p class="text-muted text-sm mt-4">Precios orientativos y variables según referencia y fecha. Cotiza por WhatsApp el valor exacto.</p>
-      <a class="cta-btn cta-whatsap mt-4" href="https://wa.me/573204420417?text=Hola,%20quiero%20una%20comparativa%20de%20precios%20para%20mi%20carro">Cotizar mi referencia →</a>
     </div>
+    <a class="btn wa mt-4" href="https://wa.me/573204420417?text=Hola%2C%20quiero%20una%20comparativa%20de%20precios%20para%20mi%20carro">Cotizar mi referencia →</a>
   </section>
 
-  <section class="section">
-    <h2 class="text-2xl mb-4 text-gold">¿Por qué la Willard Extrema es la mejor opción?</h2>
-    <div class="cards">
-      <div class="card"><h3>⚡ Arranque en frío</h3><p>Tecnología calcio-calcio que resiste el clima de Bogotá y el trafico pesado.</p></div>
-      <div class="card"><h3>🛡️ Garantía real</h3><p>12 meses con cambio inmediato y política escrita.</p></div>
+  <!-- Por qué Willard -->
+  <section class="section" id="porque">
+    <div class="section-header">
+      <span class="kicker">¿POR QUÉ WILLARD EXTREMA?</span>
+      <h2>La mejor opción en Bogotá</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><h3>⚡ Arranque en frío</h3><p>Tecnología calcio-calcio que resiste el clima de Bogotá y el tráfico pesado.</p></div>
+      <div class="card gold"><h3>🛡️ Garantía real</h3><p>12 meses con cambio inmediato y política escrita.</p></div>
       <div class="card"><h3>🚚 A domicilio</h3><p>Llegamos a tu casa con la instalación incluida en 30 minutos.</p></div>
     </div>
   </section>
 
-  <div class="cta-banner">
-    <h2>¿Dudas entre marcas?</h2>
-    <p>Te asesoramos gratis por WhatsApp según tu vehículo y presupuesto.</p>
-    <a class="cta-btn cta-whatsap" href="https://wa.me/573204420417?text=Hola,%20necesito%20asesoría%20sobre%20qué%20batería%20elegir%20para%20mi%20carro">
-      WhatsApp 3204420417 →
-    </a>
-  </div>
+  <!-- CTA final -->
+  <section class="section">
+    <div class="cta-banner">
+      <h2>¿Dudas entre marcas?</h2>
+      <p>Te asesoramos gratis por WhatsApp según tu vehículo y presupuesto.</p>
+      <a class="btn wa" href="https://wa.me/573204420417?text=Hola%2C%20necesito%20asesor%C3%ADa%20sobre%20qu%C3%A9%20bater%C3%ADa%20elegir%20para%20mi%20carro">
+        WhatsApp 3204420417 →
+      </a>
+    </div>
+  </section>
 
-  <a class="whatsapp-float" href="https://wa.me/573204420417?text=Hola%20Excelencia%20Automotriz,%20¿qué%20batería%20me%20recomiendan?" aria-label="WhatsApp">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M18.57 12.59L20.97 15L3.75 7.37L2 6L13.44 15L3.82 21.63Z"/>
-    </svg>
+  <!-- WhatsApp flotante -->
+  <a class="whatsapp-float" href="https://wa.me/573204420417?text=Hola%20Excelencia%2C%20%C2%BFqu%C3%A9%20bater%C3%ADa%20me%20recomiendan?" aria-label="WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.83 14.12c-.25.7-1.45 1.33-2 1.38-.51.04-1.16.07-1.87-.12-.43-.11-.99-.32-1.7-.63-3-1.29-4.95-4.3-5.1-4.5-.15-.2-1.22-1.62-1.22-3.1 0-1.47.77-2.19 1.04-2.49.27-.3.6-.37.8-.37l.58.01c.18.01.43-.07.67.51.25.6.85 2.07.92 2.22.08.15.13.33.03.53-.1.2-.15.32-.3.5l-.45.53c-.15.15-.31.31-.13.61.18.3.8 1.32 1.71 2.14 1.18 1.06 2.17 1.39 2.48 1.55.31.15.49.13.67-.08.18-.2.77-.9.98-1.21.2-.31.41-.26.7-.15.29.1 1.82.86 2.13 1.02.31.15.52.23.6.36.08.13.08.76-.17 1.44z"/></svg>
   </a>
 
+  <!-- Footer -->
+    <!-- Footer -->
   <footer>
-    <small>&copy; 2026 Excelencia Automotriz. Cra. 56 #14, Puente Aranda, Bogotá. <a href="tel:3204420417">3204420417</a> | <a href="https://wa.me/573204420417">WhatsApp</a></small>
+    <div class="f-title">EXCELENCIA AUTOMOTRIZ</div>
+    <p>Willard Extrema Oficial · Precios con usada · Garantía 12 meses</p>
+    <p class="mt-2">Cra. 56 #14, Puente Aranda, Bogotá · <a href="tel:3204420417">3204420417</a> · <a href="https://wa.me/573204420417">WhatsApp</a></p>
+    <p class="mt-2 text-xs">Domicilio 30 min GRATIS · 20 localidades Bogotá y Cundinamarca</p>
+    <p class="mt-2 text-xs">&copy; 2026 Excelencia Automotriz</p>
   </footer>
 
   <script src="js/script.js"></script>
