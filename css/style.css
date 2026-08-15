@@ -1,0 +1,142 @@
+/* Excelencia Automotriz - Style Puro HTML/CSS */
+:root {
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --gold: #ffcc00;
+  --gold-dark: #d9a905;
+  --blue: #1e40af;
+  --blue-light: #3b82f6;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --border: #334155;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header sticky */
+header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(15,23,42,0.92); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Navbar */
+.navbar { max-width: 1280px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; }
+.logo { font-weight: 800; font-size: 1.25rem; color: var(--gold); letter-spacing: -1px; text-decoration: none; }
+.logo span { color: var(--text); }
+.nav-links a { color: var(--text-muted); text-decoration: none; margin-left: 1.5rem; font-size: 0.875rem; transition: color 0.2s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-links a.active { color: var(--gold); }
+
+/* Hero */
+.hero { min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 3rem 1.5rem; }
+.hero.small-hero { min-height: 45vh; }
+.hero h1 { font-size: clamp(2rem, 6vw, 3.25rem); margin-bottom: 1rem; letter-spacing: -0.02em; line-height: 1.1; }
+.hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 1.5rem; }
+.hero .local { color: var(--gold); }
+.cta-btn { display: inline-block; padding: 0.875rem 1.75rem; background: var(--gold); color: var(--bg-dark); font-weight: 700; text-decoration: none; border-radius: 999px; margin-top: 1rem; font-size: 1rem; transition: background .2s; }
+.cta-btn:hover { background: var(--gold-dark); }
+.cta-btn.cta-whatsap { background: #25d366; color: #fff; }
+.cta-btn.cta-whatsap:hover { background: #1eb957; }
+
+/* Section & Cards */
+.section { max-width: 1280px; margin: 3rem auto; padding: 0 1.5rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; text-align: center; }
+.card.border-gold { border-color: rgba(255,204,0,.5); }
+.card h3 { margin-bottom: .5rem; color: var(--gold); font-size: 1.1rem; }
+.card p { color: var(--text-muted); font-size: .875rem; }
+
+/* Utilidades */
+.max-w-2xl { max-width: 800px; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.p-4 { padding: 1.5rem; }
+.mb-3 { margin-bottom: .75rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mt-3 { margin-top: .75rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-5 { margin-top: 1.25rem; }
+.mt-6 { margin-top: 1.5rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-xl { font-size: 1.25rem; }
+.font-bold { font-weight: 700; }
+.text-gold { color: var(--gold); }
+.text-muted { color: var(--text-muted); }
+.text-sm { font-size: .875rem; }
+.text-xs { font-size: .75rem; }
+.text-balance { text-wrap: balance; }
+.grid { display: grid; gap: 1rem; }
+.grid-cols-2 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.gap-2 { gap: .5rem; }
+.gap-3 { gap: .75rem; }
+.gap-4 { gap: 1rem; }
+.w-full { width: 100%; }
+.list-none { list-style: none; }
+.li-gap li { margin-bottom: .6rem; }
+.rounded-2xl { border-radius: 1rem; }
+.bg-card { background: var(--bg-card); }
+.border { border: 1px solid var(--border); }
+.p-5 { padding: 1.5rem; }
+.p-6 { padding: 2rem; }
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+
+/* Tabla precios */
+table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+th, td { padding: .75rem 1rem; text-align: left; border-bottom: 1px solid var(--border); font-size: .9rem; }
+th { color: var(--gold); text-transform: uppercase; letter-spacing: .05em; font-size: .8rem; }
+td.highlight { color: var(--success); font-weight: 700; }
+
+/* FAQ */
+.faq details { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: .75rem; }
+.faq summary { cursor: pointer; font-weight: 700; color: var(--gold); font-size: .95rem; }
+.faq p { margin-top: .6rem; color: var(--text-muted); font-size: .9rem; }
+
+/* CTA banner */
+.cta-banner { text-align: center; padding: 2.5rem 1.5rem; background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid var(--gold); border-radius: 16px; margin: 2rem auto; max-width: 800px; }
+.cta-banner h2 { color: var(--gold); margin-bottom: .5rem; }
+.cta-banner p { color: var(--text-muted); margin-bottom: 1rem; }
+
+/* Article */
+.article { max-width: 800px; margin: 0 auto; }
+.article h2 { color: var(--gold); margin: 1.5rem 0 .75rem; font-size: 1.35rem; }
+.article p, .article li { color: var(--text-muted); font-size: 1rem; margin-bottom: .8rem; }
+.article ul { padding-left: 1.25rem; margin-bottom: 1rem; }
+.article strong { color: var(--text); }
+.article-badge { display: inline-block; background: rgba(255,204,0,.15); color: var(--gold); padding: .25rem .75rem; border-radius: 999px; font-size: .75rem; font-weight: 700; margin-bottom: 1rem; }
+
+/* Breadcrumb */
+.breadcrumb { max-width: 800px; margin: 1.5rem auto 0; padding: 0 1.5rem; font-size: .8rem; color: var(--text-muted); }
+.breadcrumb a { color: var(--gold); text-decoration: none; }
+
+/* WhatsApp CTA flotante */
+.whatsapp-float {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 1000;
+  background: #25d366; color: #fff; width: 60px; height: 60px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,.3);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,.4); }
+  70% { box-shadow: 0 0 12px 4px rgba(37,211,102,.4); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+
+/* Footer */
+footer { max-width: 1280px; margin: 4rem auto 2rem; padding: 2rem 1.5rem; text-align: center; color: var(--text-muted); border-top: 1px solid var(--border); }
+footer a { color: var(--gold); }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .nav-links a { margin-left: .75rem; font-size: .8rem; }
+  .grid-cols-2 { grid-template-columns: 1fr; }
+}

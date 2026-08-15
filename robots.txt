@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://serviciosapcsoporte-create.github.io/excelenciaautomotriz.store/sitemap.xml
