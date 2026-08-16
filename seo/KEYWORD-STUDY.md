@@ -91,3 +91,19 @@
 - **`baterías a domicilio bogotá` (5k, competencia BAJA)** es la llave de entrada real: pocos la optimizan exacta.
 - **Puente Aranda**: solo `makroelectricosec.com` tiene página local específica; el resto son genéricas. Mayor oportunidad de top 3 local.
 - Las keywords de marca (`excelencia automotriz bogotá`) son low-hanging fruit: nadie más puede ocupar su top 1.
+
+## 8. Contenido publicado (16/08/2026)
+
+Artículos de blog nuevos para ampliar cola larga y local:
+
+| Artículo | Keyword objetivo | Página |
+|---|---|---|
+| Batería a domicilio en Puente Aranda | `batería a domicilio puente aranda` | /blog/bateria-a-domicilio-puente-aranda |
+| Batería de carro en Ciudad Bolívar y el sur | `batería de carro ciudad bolívar`, `batería sur bogotá` | /blog/bateria-de-carro-ciudad-bolivar |
+| 36/750 vs 31H/1250 | `batería willard 36/750`, `31h/1250` | /blog/bateria-willard-36750-vs-31h1250 |
+| Precios Willard Bogotá 2026 | `precio batería willard bogotá`, `baterías willard precios` | /blog/precios-baterias-willard-bogota-2026 |
+| Batería de carro 24 horas | `batería de carro 24 horas bogotá`, `batería urgente` | /blog/bateria-carro-24-horas-bogota |
+| Cómo elegir la batería de tu carro | `cómo elegir batería de carro`, `qué batería lleva mi carro` | /blog/como-elegir-bateria-de-carro |
+
+15 páginas de localidad nuevas (cada una con keyword `batería willard <localidad>` y `batería a domicilio <localidad>`):
+Chapinero, Barrios Unidos, Engativá, Fontibón, Bosa, Ciudad Bolívar, San Cristóbal, Usme, Tunjuelito, Rafael Uribe, Antonio Nariño, Teusaquillo, La Candelaria, Santa Fe, Chía/Cajicá.

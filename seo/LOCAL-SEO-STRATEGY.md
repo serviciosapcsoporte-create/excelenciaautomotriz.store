@@ -25,16 +25,18 @@ La palanca principal es **local: relevancia local + proximidad + reputación** (
 | Señal | Estado | Acción |
 |---|---|---|
 | NAP en footer + schema | ✅ Consistente (Cra. 56 #14-56) | Mantener |
-| LocalBusiness + Service schema | ✅ Todas las páginas | Mejorar props (geo 5 decimales, openingHoursSpecification, sameAs, image) |
-| Página Puente Aranda (foco) | ✅ Creada | Optimizar títulos/ contenido local |
-| 4 páginas de localidad | ✅ Kennedy, Suba, Usaquén, Soacha | Interlink desde home |
-| Lista de 20 localidades | ⚠️ Solo en JS (no indexable) | Añadir sección HTML estática con keywords |
+| LocalBusiness + Service schema | ✅ Todas las páginas | ✅ geo 5 decimales, openingHoursSpecification, sameAs, image |
+| Página Puente Aranda (foco) | ✅ Creada | ✅ Títulos/ contenido local optimizados |
+| Páginas de localidad | ✅ 19 (20 zonas cubiertas; Puente Aranda como página propia) | Interlink desde home y blogs |
+| Lista de 20 localidades | ✅ Sección HTML estática indexable con keywords | Enlaza a las 19 páginas |
 | Google Business Profile | ❌ No verificado/confirmado | **Prioridad externa #1** |
-| Reseñas | ❌ Sin widget ni estímulo | Widget + CTA de reseñas |
+| Reseñas | ⚠️ CTA agregado; sin reseñas verificadas | Activar pedido de reseñas + enlace directo GBP |
 | Citas NAP (directorios) | ❌ No creadas | Google, Waze, 2GIS, DogWeb, Yelp |
-| openingHoursSpecification | ❌ | Añadir (24 horas) |
-| geo con 5 decimales | ⚠️ 4 decimales | Precisar |
-| sameAs (dogweb.lat) | ⚠️ Solo en algunas | Añadir en todas |
+| openingHoursSpecification | ✅ (24 horas) | Mantener |
+| geo con 5 decimales | ✅ | Mantener |
+| sameAs (dogweb.lat) | ✅ En todas | Mantener |
+| Canonical + meta robots | ✅ En todas las páginas | Mantener |
+| BreadcrumbList schema | ✅ En todas las páginas con migas | Mantener |
 
 ---
 
@@ -90,16 +92,22 @@ Norte (Usaquén, Chapinero, Suba, Barrios Unidos) · Occidente (Kennedy, Engativ
 ## 5. Plan de implementación en el sitio (este sprint)
 
 1. ✅ **seo/LOCAL-SEO-STRATEGY.md** — este documento.
-2. ⏳ **Schema**: añadir a todas las páginas — `openingHoursSpecification` (24h), `sameAs` (dogweb.lat), `image`, geo a 5 decimales.
-3. ⏳ **Sección estática de localidades** en index.html: lista HTML con las 20 zonas + anchors a páginas de localidad.
-4. ⏳ **Auditoría de títulos/H1/meta** por página (keywords de localización ya presentes).
-5. ⏳ Commit + deploy + verificación (sitemap incluye localidades).
+2. ✅ **Schema**: añadido a todas las páginas — `openingHoursSpecification` (24h), `sameAs` (dogweb.lat), `image`, geo a 5 decimales.
+3. ✅ **Sección estática de localidades** en index.html: 20 cards con keywords + enlaces a las 19 páginas de localidad.
+4. ✅ **15 páginas de localidad nuevas** (Chapinero, Barrios Unidos, Engativá, Fontibón, Bosa, Ciudad Bolívar, San Cristóbal, Usme, Tunjuelito, Rafael Uribe, Antonio Nariño, Teusaquillo, La Candelaria, Santa Fe, Chía/Cajicá) con schema LocalBusiness + Service + BreadcrumbList y geo propio.
+5. ✅ **Auditoría de títulos/H1/meta** por página + canonical + meta robots en todas.
+6. ✅ **6 artículos de blog nuevos** enfocados en keywords locales/transaccionales (Puente Aranda, sur, 36/750 vs 31H/1250, precios 2026, 24h, guía de elección).
+7. ✅ **BreadcrumbList** schema en todas las páginas con migas.
+8. ✅ **Imagen hero optimizada** (503 KB → 63 KB) + preload LCP.
+9. ✅ **CTA de reseñas Google** en home y contacto (Pilar C).
+10. ✅ Commit + deploy + verificación; sitemap con 42 URLs.
 
 ---
 
 ## 6. Checklist externo (requiere al dueño)
 
 - [ ] Crear y verificar **Google Business Profile** (nombre, categoría, dirección, horario 24h, web, WhatsApp).
+- [ ] Reemplazar el enlace de reseña (`google.com/maps/search/Excelencia+Automotriz...`) por el enlace directo de reseña del GBP una vez verificado.
 - [ ] Publicar 3+ fotos reales (local, baterías, instalaciones).
 - [ ] Pedir **reseñas Google** a clientes reales (vía WhatsApp post-entrega).
 - [ ] Citas NAP en: Google Maps, Waze, 2GIS, Yelp, Páginas Amarillas, DogWeb.
