@@ -1,4 +1,18 @@
 User-agent: *
 Allow: /
 
+# Bots de inteligencia artificial (visibilidad en búsquedas generativas)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://excelenciaautomotriz.store/sitemap.xml
