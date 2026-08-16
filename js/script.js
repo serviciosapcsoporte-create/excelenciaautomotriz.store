@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
       items.forEach(l => {
         const el = document.createElement('div');
         el.className = 'map-item';
-        el.innerHTML = `<div><div class="nm">${l.nombre} ${l.sincomp ? '<span class="sc">SIN COMPETENCIA</span>' : ''}</div>
+        el.innerHTML = `<div><div class="nm">${l.nombre}</div>
           <div class="zn">${l.zona}</div></div>
           <div class="rf">${l.ref}</div>`;
         el.addEventListener('click', () => select(l.id));
