@@ -2,8 +2,8 @@
 
 > Sitio: https://excelenciaautomotriz.store/
 > Negocio: venta e instalación de baterías Willard a domicilio en Bogotá + Cundinamarca.
-> Tipo: **Híbrido** (dirección física Cra. 56 #14-56, Puente Aranda + área de servicio en 20 localidades).
-> Última actualización: 14/08/2026
+> Tipo: **Híbrido** (dirección física Cra. 56 #14-56, Puente Aranda + área de servicio en 31 zonas).
+> Última actualización: 16/08/2026
 
 ---
 
@@ -20,15 +20,15 @@ La palanca principal es **local: relevancia local + proximidad + reputación** (
 
 ---
 
-## 2. Diagnóstico actual (14/08/2026)
+## 2. Diagnóstico actual (16/08/2026)
 
 | Señal | Estado | Acción |
 |---|---|---|
 | NAP en footer + schema | ✅ Consistente (Cra. 56 #14-56) | Mantener |
 | LocalBusiness + Service schema | ✅ Todas las páginas | ✅ geo 5 decimales, openingHoursSpecification, sameAs, image |
 | Página Puente Aranda (foco) | ✅ Creada | ✅ Títulos/ contenido local optimizados |
-| Páginas de localidad | ✅ 19 (20 zonas cubiertas; Puente Aranda como página propia) | Interlink desde home y blogs |
-| Lista de 20 localidades | ✅ Sección HTML estática indexable con keywords | Enlaza a las 19 páginas |
+| Páginas de localidad/municipio | ✅ 30 (31 zonas: 20 Bogotá + 11 Cundinamarca) | Interlink desde home y blogs |
+| Lista de 31 zonas | ✅ Sección HTML estática indexable con keywords | Enlaza a las 30 páginas |
 | Google Business Profile | ❌ No verificado/confirmado | **Prioridad externa #1** |
 | Reseñas | ⚠️ CTA agregado; sin reseñas verificadas | Activar pedido de reseñas + enlace directo GBP |
 | Citas NAP (directorios) | ❌ No creadas | Google, Waze, 2GIS, DogWeb, Yelp |

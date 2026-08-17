@@ -23,7 +23,18 @@ const LOCALIDADES = [
   {id:"puente-aranda",nombre:"Puente Aranda",zona:"Centro-Sur",ref:"42/850",sincomp:true,busquedas:340,x:40,y:58},
   {id:"santa-fe",nombre:"Santa Fe",zona:"Oriente",ref:"36/750",sincomp:true,busquedas:300,x:60,y:48},
   {id:"soacha",nombre:"Soacha",zona:"Cundinamarca",ref:"36/750",sincomp:false,busquedas:750,x:22,y:88},
-  {id:"chia",nombre:"Chía / Cajicá",zona:"Cundinamarca Norte",ref:"31H/1250",sincomp:false,busquedas:520,x:45,y:8}
+  {id:"chia",nombre:"Chía / Cajicá",zona:"Cundinamarca Norte",ref:"31H/1250",sincomp:false,busquedas:520,x:45,y:8},
+  {id:"los-martires",nombre:"Los Mártires",zona:"Centro",ref:"NS40/560",sincomp:false,busquedas:0,x:52,y:55},
+  {id:"mosquera",nombre:"Mosquera",zona:"Cundinamarca Occidente",ref:"36/750",sincomp:false,busquedas:0,x:13,y:75},
+  {id:"funza",nombre:"Funza",zona:"Cundinamarca Occidente",ref:"36/750",sincomp:false,busquedas:0,x:10,y:70},
+  {id:"madrid",nombre:"Madrid",zona:"Cundinamarca Occidente",ref:"36/750",sincomp:false,busquedas:0,x:5,y:64},
+  {id:"el-rosal",nombre:"El Rosal",zona:"Cundinamarca Occidente",ref:"36/750",sincomp:false,busquedas:0,x:28,y:6},
+  {id:"cota",nombre:"Cota",zona:"Cundinamarca Norte",ref:"31H/1250",sincomp:false,busquedas:0,x:37,y:8},
+  {id:"zipaquira",nombre:"Zipaquirá",zona:"Cundinamarca Norte",ref:"36/750",sincomp:false,busquedas:0,x:52,y:2},
+  {id:"sopo",nombre:"Sopó",zona:"Cundinamarca Norte",ref:"42/850",sincomp:false,busquedas:0,x:60,y:2},
+  {id:"tenjo",nombre:"Tenjo",zona:"Cundinamarca Norte",ref:"36/750",sincomp:false,busquedas:0,x:42,y:4},
+  {id:"tabio",nombre:"Tabio",zona:"Cundinamarca Norte",ref:"36/750",sincomp:false,busquedas:0,x:48,y:4},
+  {id:"la-calera",nombre:"La Calera",zona:"Cundinamarca Oriente",ref:"36/750",sincomp:false,busquedas:0,x:80,y:22}
 ];
 
 // Precios Willard Extrema (del template)
