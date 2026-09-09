@@ -9,9 +9,19 @@
 - [Batería a domicilio 24 horas](https://excelenciaautomotriz.store/baterias-a-domicilio.html): Servicio de cambio de batería a domicilio, cobertura y formas de pago.
 - [Sede en Puente Aranda](https://excelenciaautomotriz.store/puente-aranda.html): Punto físico en Cra. 56 #14-56, Puente Aranda, Bogotá.
 - [Comparativas](https://excelenciaautomotriz.store/comparativas.html): Excelencia Automotriz frente a otras tiendas de baterías en Bogotá.
+- [Batería por modelo de vehículo](https://excelenciaautomotriz.store/marcas-vehiculos.html): Qué referencia de batería Willard necesita cada marca y modelo (Hilux, Tucson, Sportage, Duster, etc.).
 - [Blog](https://excelenciaautomotriz.store/blog.html): Guías y artículos sobre baterías de carro en Bogotá.
 - [Contacto](https://excelenciaautomotriz.store/contacto.html): WhatsApp 3204420417, teléfono, dirección y horario.
 - [Sitemap](https://excelenciaautomotriz.store/sitemap.xml): Lista completa de URLs del sitio.
+
+## Artículos del blog
+
+- [Precio de la batería Willard 36/750](https://excelenciaautomotriz.store/blog/bateria-willard-36-750-precio.html): Precio con y sin usada, CCA 750 y para qué carros sirve la referencia más vendida.
+- [Batería Willard 31H/1250 para SUV](https://excelenciaautomotriz.store/blog/bateria-willard-31h-1250-para-suv.html): Precio, compatibilidad y cuándo elegirla.
+- [Batería Willard para taxi](https://excelenciaautomotriz.store/blog/bateria-willard-para-taxi-precio.html): Referencia, precio y servicio especializado para taxis.
+- [Cuánto cuesta cambiar batería a domicilio en Bogotá 2026](https://excelenciaautomotriz.store/blog/cuanto-cuesta-cambiar-bateria-a-domicilio-bogota.html): Costo real con y sin usada, instalación y cobertura por zona.
+- [Precios de baterías Willard en Bogotá 2026](https://excelenciaautomotriz.store/blog/precios-baterias-willard-bogota-2026.html): Guía completa de precios con usada y sin usada.
+- [36/750 vs 31H/1250](https://excelenciaautomotriz.store/blog/bateria-willard-36750-vs-31h1250.html): Comparativa de las dos referencias más vendidas.
 
 ## Datos clave
 

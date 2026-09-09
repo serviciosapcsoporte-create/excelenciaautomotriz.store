@@ -1,7 +1,7 @@
 # SEO-STRATEGY — Excelencia Automotriz (Baterías Willard a Domicilio Bogotá)
 
-> Sitio: `https://serviciosapcsoporte-create.github.io/excelenciaautomotriz.store/`
-> Dominio futuro: excelenciaautomotriz.store
+> Sitio: `https://excelenciaautomotriz.store/` (CNAME activo)
+> Dominio: excelenciaautomotriz.store
 > WhatsApp/CTA: 3204420417 | Dirección: Cra. 56 #14-56, Puente Aranda, Bogotá
 > Modelo: negocio local de servicio (plantilla local-service)
 
