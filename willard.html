@@ -712,5 +712,13 @@ footer a:hover { color: var(--gold); }
   </footer>
 
   <script src="js/script.js"></script>
+  <script>
+  /* Service Worker cache - Excelencia Automotriz */
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').catch(function() {});
+    });
+  }
+  </script>
 </body>
 </html>
