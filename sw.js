@@ -1,11 +1,13 @@
 /* Excelencia Automotriz - Service Worker v1
    GitHub Pages fija Cache-Control max-age=600 y no permite headers custom.
    Este SW da cache de larga duracion a assets estaticos y fallback offline. */
-var CACHE = 'excelencia-v1';
+var CACHE = 'excelencia-v2';
 var CORE = [
   '/',
   '/index.html',
   '/img/favicon.png',
+  '/img/logo-142.webp',
+  '/img/bateria-3d-660.webp',
   '/js/script.js'
 ];
 
