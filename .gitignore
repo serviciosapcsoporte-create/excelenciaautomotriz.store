@@ -1,1 +1,17 @@
 _*.py
+*.pyc
+__pycache__/
+*.pyo
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+tools/
+build/
+dist/
+node_modules/
+.env
+*.log
+*.swp
+*.swo
+*~
