@@ -415,6 +415,7 @@ td.strike { text-decoration: line-through; color: var(--slate-500); }
   text-decoration: none;
   animation: floatpulse 2.5s ease-in-out infinite;
   transition: transform var(--dur-press) var(--ease-out);
+  transform: translateZ(0);
 }
 .whatsapp-float:active { transform: scale(0.97); }
 @keyframes floatpulse {
