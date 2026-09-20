@@ -152,15 +152,24 @@ header {
   line-height: 1.1;
   max-width: 720px;
   text-wrap: balance;
+  transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out), filter 300ms var(--ease-out);
 }
 .hero h1 .hl { color: var(--blue); }
+.hero h1[data-hero] { opacity: 0; transform: translateY(6px); filter: blur(2px); }
+.hero h1.is-visible { opacity: 1; transform: none; filter: none; }
 .hero .sub {
   margin-top: 14px;
   font-size: 17px;
   color: var(--slate-600);
   max-width: 620px;
+  transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out), filter 300ms var(--ease-out);
+  transition-delay: 60ms;
 }
-.hero .stats { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 22px; }
+.hero .sub[data-hero] { opacity: 0; transform: translateY(6px); filter: blur(2px); }
+.hero .sub.is-visible { opacity: 1; transform: none; filter: none; }
+.hero .stats { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 22px; transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out), filter 300ms var(--ease-out); transition-delay: 120ms; }
+.hero .stats[data-hero] { opacity: 0; transform: translateY(6px); filter: blur(2px); }
+.hero .stats.is-visible { opacity: 1; transform: none; filter: none; }
 .stat {
   display: flex; align-items: center; gap: 8px;
   background: #fff;
@@ -187,10 +196,10 @@ header {
   box-shadow: 0 24px 64px rgba(15,23,42,.18);
   border: 1px solid rgba(255,255,255,.6);
   filter: saturate(1.08) contrast(1.04);
-  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out), clip-path 450ms var(--ease-out);
+  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out), clip-path 350ms var(--ease-drawer);
   clip-path: inset(0 0 0 0);
 }
-.battery-img[data-reveal] { clip-path: inset(0 100% 0 0); }
+.battery-img[data-reveal] { clip-path: inset(0 100% 0 0); will-change: clip-path; }
 .battery-wrap.scrolled .battery-img { opacity: .35; transform: scale(.97); }
 
 /* ---- Section ---- */
@@ -498,6 +507,9 @@ footer a:hover { color: var(--gold); }
   .faq-item .faq-body { transition-duration: 0.01s !important; }
   .grid .card[data-reveal-cards] { opacity: 1 !important; transform: none !important; }
   .stat:hover { transform: none !important; }
+  .hero h1[data-hero],
+  .hero .sub[data-hero],
+  .hero .stats[data-hero] { opacity: 1 !important; transform: none !important; filter: none !important; }
   html { scroll-behavior: auto; }
 }
 @media (prefers-reduced-transparency: reduce) {

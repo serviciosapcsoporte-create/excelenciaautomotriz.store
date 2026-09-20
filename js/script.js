@@ -69,9 +69,24 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(() => requestAnimationFrame(() => batteryImg.removeAttribute('data-reveal')));
     setTimeout(() => batteryImg.removeAttribute('data-reveal'), 80);
   }
-
-  // --- Batería 3D: fade al hacer scroll ---
-  const bw = document.querySelector('.battery-wrap');
+  // --- Hero secuencia Design Engineering (blur + stagger) ---
+  const heroEls = document.querySelectorAll('.hero [data-hero]');
+  if (heroEls.length) {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) {
+      heroEls.forEach(el => { el.classList.add('is-visible'); });
+    } else {
+      // forza reflow y activa en siguiente frame para que transicione
+      void document.querySelector('.hero').offsetWidth;
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => heroEls.forEach(el => el.classList.add('is-visible')));
+      });
+    }
+  }
+
+  // --- Batería 3D: fade al hacer scroll ---
+
+  const bw = document.querySelector('.battery-wrap');
   if (bw) {
     const onScroll = () => {
       const r = bw.getBoundingClientRect();
