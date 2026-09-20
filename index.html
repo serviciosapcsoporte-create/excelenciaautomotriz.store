@@ -220,6 +220,9 @@ header {
   filter: saturate(1.08) contrast(1.04);
   transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out), clip-path 350ms var(--ease-drawer);
   clip-path: inset(0 0 0 0);
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
+  display: block;
 }
 .battery-img[data-reveal] { clip-path: inset(0 100% 0 0); will-change: clip-path; }
 .battery-wrap.scrolled .battery-img { opacity: .35; transform: scale(.97); }
@@ -690,7 +693,10 @@ footer a:hover { color: var(--gold); }
         </a>
       </div>
       <div class="battery-wrap">
-        <img class="battery-img" src="img/bateria-3d-660.webp" srcset="img/bateria-3d-378.webp 378w, img/bateria-3d-660.webp 660w" sizes="(min-width:600px) 560px, 92vw" width="660" height="440" alt="Batería Willard Extrema a domicilio Bogotá" loading="eager" decoding="async" fetchpriority="high">
+        <video class="battery-img" autoplay muted loop playsinline preload="metadata" poster="img/bateria-3d-660.webp" width="660" height="440" aria-label="Batería Willard Extrema a domicilio Bogotá">
+          <source src="img/hero-battery.mp4" type="video/mp4">
+          <img src="img/bateria-3d-660.webp" srcset="img/bateria-3d-378.webp 378w, img/bateria-3d-660.webp 660w" sizes="(min-width:600px) 560px, 92vw" width="660" height="440" alt="Batería Willard Extrema a domicilio Bogotá" loading="eager" decoding="async">
+        </video>
       </div>
     </div>
   </section>
