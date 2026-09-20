@@ -333,18 +333,25 @@ header {
 .card .tag.red { background: rgba(220,38,38,.1); color: var(--red); }
 .card .tag.green { background: rgba(16,185,129,.1); color: #047857; }
 
-/* Cobertura grid compacto + clusters H3 regionales */
-#cobertura .cov-group { margin-top: 28px; }
-#cobertura .cov-group:first-of-type { margin-top: 8px; }
-#cobertura .cov-group h3 { font-size: 13px; font-weight: 800; letter-spacing: .02em; color: var(--dark); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; text-transform: uppercase; }
-#cobertura .cov-group h3::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
-#cobertura .grid { gap: 12px; }
+/* Cobertura — acordeón + grid 4 columnas lateral (igual que #marcas) */
+.cov-accordion { border: 1px solid var(--border); border-radius: 14px; margin-top: 14px; overflow: hidden; background: #fff; }
+.cov-accordion:first-of-type { margin-top: 8px; }
+.cov-accordion summary { cursor: pointer; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; list-style: none; }
+.cov-accordion summary::-webkit-details-marker { display: none; }
+.cov-accordion summary h3 { margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .02em; color: var(--dark); display: flex; align-items: center; gap: 8px; text-transform: uppercase; }
+.cov-accordion summary h3::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
+.cov-accordion .chev { transition: transform var(--dur-base) var(--ease-out); color: var(--blue); flex-shrink: 0; }
+.cov-accordion[open] .chev { transform: rotate(180deg); }
+.cov-body { display: grid; grid-template-rows: 0fr; opacity: 0; contain: layout; transition: grid-template-rows var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out); overflow: hidden; }
+.cov-body > div { overflow: hidden; }
+.cov-accordion[open] .cov-body { grid-template-rows: 1fr; opacity: 1; }
+.cov-body .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding: 0 16px 16px; }
+@media (max-width: 900px) { .cov-body .grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); } }
 #cobertura .card { padding: 14px 16px; border-radius: 12px; }
 #cobertura .card h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
 #cobertura .card p { font-size: 13px; }
 #por-que-comprar .card h4 { font-size: 15px; font-weight: 800; margin-bottom: 6px; letter-spacing: -.01em; }
 #por-que-comprar .card p { font-size: 14px; }
-@media (max-width: 600px) { #cobertura .grid.grid-4 { grid-template-columns: repeat(2, 1fr); } }
 
 /* ---- Tabla de precios ---- */
 .table-wrap {
@@ -623,9 +630,11 @@ footer a:hover { color: var(--gold); }
   .btn,
   .map-pin,
   .faq-item summary .chev,
+  .cov-accordion .chev,
   .stat,
   .grid .card,
-  .faq-item .faq-body { transition-duration: 0.01s !important; }
+  .faq-item .faq-body,
+  .cov-body { transition-duration: 0.01s !important; }
   .grid .card[data-reveal-cards] { opacity: 1 !important; transform: none !important; }
   .stat:hover { transform: none !important; }
   .hero h1[data-hero],
