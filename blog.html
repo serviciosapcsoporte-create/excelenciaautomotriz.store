@@ -379,16 +379,21 @@ td.strike { text-decoration: line-through; color: var(--slate-500); }
   display: grid;
   grid-template-rows: 0fr;
   opacity: 0;
-  transition: grid-template-rows var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out), padding var(--dur-base) var(--ease-out);
+  contain: layout;
+  transition: grid-template-rows var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out);
   overflow: hidden;
 }
 .faq-item .faq-body > div {
   overflow: hidden;
+  transform: translateY(-4px);
+  transition: transform var(--dur-base) var(--ease-out);
 }
 .faq-item[open] .faq-body {
   grid-template-rows: 1fr;
   opacity: 1;
-  padding: 0 16px 14px;
+}
+.faq-item[open] .faq-body > div {
+  transform: translateY(0);
 }
 .faq-item:not([open]) .faq-body {
   padding-top: 0;
