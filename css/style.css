@@ -492,8 +492,10 @@ footer a:hover { color: var(--gold); }
   .btn,
   .map-pin,
   .faq-item summary .chev,
+  .stat,
   .grid .card,
   .faq-item .faq-body { transition-duration: 0.01s !important; }
   .grid .card[data-reveal-cards] { opacity: 1 !important; transform: none !important; }
+  .stat:hover { transform: none !important; }
   html { scroll-behavior: auto; }
 }
