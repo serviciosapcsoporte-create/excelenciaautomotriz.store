@@ -83,10 +83,11 @@ header {
   position: sticky;
   top: 39px;
   z-index: 50;
-  background: rgba(255,255,255,.85);
-  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,.6);
+  backdrop-filter: blur(20px) saturate(180%);
   will-change: backdrop-filter;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(255,255,255,.4);
+  border-top: 1px solid rgba(255,255,255,.4);
 }
 .navbar {
   max-width: 1280px;
@@ -520,6 +521,13 @@ footer a:hover { color: var(--gold); }
   .grid .card[data-reveal-cards] { opacity: 1 !important; transform: none !important; }
   .stat:hover { transform: none !important; }
   html { scroll-behavior: auto; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  header { background: rgba(255,255,255,.95); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .hero-blob { opacity: .35; }
+}
+@media (prefers-contrast: more) {
+  header { background: #fff; backdrop-filter: none; border-bottom: 1px solid var(--border); }
 }
   </style>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
