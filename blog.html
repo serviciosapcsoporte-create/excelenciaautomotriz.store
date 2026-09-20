@@ -153,19 +153,27 @@ header {
   color: #fff;
   font-size: 13px;
   font-weight: 600;
-  border: none;
+  border: 1px solid rgba(255,255,255,0.88);
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   white-space: nowrap;
-  transition: background-color var(--dur-fast) var(--ease-out), transform var(--dur-press) var(--ease-out);
+  position: relative;
+  transform: translateY(0);
+  transition: background-color var(--dur-fast) var(--ease-out), transform var(--dur-press) var(--ease-out), box-shadow var(--dur-press) var(--ease-out), filter var(--dur-press) var(--ease-out);
+  box-shadow: 0 0 10px rgba(26,115,232,0.4), 0 6px 14px rgba(26,115,232,0.25), 0 3px 0 #0F3A7A, 0 4px 8px rgba(0,0,0,0.12);
 }
-.cta-top:active { transform: scale(0.97); }
-.cta-top:hover { background: #1557b0; }
-.cta-top.wa { background: #25D366; }
-.cta-top.wa:hover { background: #1eb857; }
+.cta-top:active { transform: translateY(2px) scale(0.97); box-shadow: 0 0 8px rgba(26,115,232,0.3), 0 1px 0 #0F3A7A; }
+.cta-top:hover { background: #1557b0; transform: translateY(-1px); box-shadow: 0 0 16px rgba(26,115,232,0.55), 0 8px 18px rgba(26,115,232,0.35), 0 3px 0 #0F3A7A; }
+.cta-top.wa {
+  background: #25D366;
+  border: 1px solid rgba(255,255,255,0.92);
+  box-shadow: 0 0 12px rgba(37,211,102,0.45), 0 6px 14px rgba(37,211,102,0.3), 0 3px 0 #1A8A2E, 0 4px 8px rgba(0,0,0,0.14);
+}
+.cta-top.wa:hover { background: #1eb857; border-color: #fff; box-shadow: 0 0 18px rgba(37,211,102,0.6), 0 8px 20px rgba(37,211,102,0.4), 0 3px 0 #1A8A2E; transform: translateY(-1px); }
+.cta-top.wa:active { box-shadow: 0 0 8px rgba(37,211,102,0.35), 0 1px 0 #1A8A2E; transform: translateY(2px) scale(0.97); }
 
 /* ---- Hero — video fullscreen + contenido centrado (emil-design-eng) ---- */
 .hero {
@@ -476,33 +484,65 @@ td.strike { text-decoration: line-through; color: var(--slate-500); }
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   margin-top: 18px; padding: 14px 28px;
-  border-radius: 999px; border: none; cursor: pointer;
+  border-radius: 999px; border: 1px solid rgba(255,255,255,0); cursor: pointer;
   font-size: 15px; font-weight: 700; text-decoration: none;
-  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+  position: relative;
+  transform: translateY(0);
+  transition: transform var(--dur-press) var(--ease-out), box-shadow var(--dur-press) var(--ease-out), filter var(--dur-press) var(--ease-out), background-color var(--dur-fast) var(--ease-out);
 }
-.btn:active { transform: scale(0.97); }
-.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(2px) scale(0.97); }
+.btn:hover { transform: translateY(-2px); }
 @media (hover: hover) and (pointer: fine) {
-  .btn:hover { transform: translateY(-1px); }
+  .btn:hover { transform: translateY(-2px); }
 }
-.btn.wa { background: #25D366; color: #fff; box-shadow: 0 8px 24px rgba(37,211,102,.35); }
-.btn.wa:hover { background: #1eb857; }
-.btn.gold { background: var(--gold); color: var(--dark); box-shadow: 0 8px 24px rgba(255,204,0,.4); }
-.btn.blue { background: var(--blue); color: #fff; }
+/* CTA WhatsApp — neón + 3D */
+.btn.wa {
+  background: #25D366; color: #fff;
+  border: 1px solid rgba(255,255,255,0.92);
+  box-shadow: 0 0 14px rgba(37,211,102,0.45), 0 8px 20px rgba(37,211,102,0.35), 0 4px 0 #1A8A2E, 0 6px 12px rgba(0,0,0,0.18);
+}
+.btn.wa:hover {
+  background: #1eb857;
+  border-color: #fff;
+  box-shadow: 0 0 22px rgba(37,211,102,0.65), 0 12px 28px rgba(37,211,102,0.45), 0 4px 0 #1A8A2E, 0 8px 16px rgba(0,0,0,0.20);
+  filter: brightness(1.03);
+}
+.btn.wa:active {
+  box-shadow: 0 0 10px rgba(37,211,102,0.35), 0 2px 0 #1A8A2E, 0 2px 8px rgba(0,0,0,0.15);
+}
+.btn.gold {
+  background: var(--gold); color: var(--dark);
+  border: 1px solid rgba(255,255,255,0.9);
+  box-shadow: 0 0 12px rgba(255,204,0,0.45), 0 8px 20px rgba(255,204,0,0.35), 0 4px 0 #B48A00, 0 6px 12px rgba(0,0,0,0.15);
+}
+.btn.gold:hover { box-shadow: 0 0 20px rgba(255,204,0,0.6), 0 12px 28px rgba(255,204,0,0.45), 0 4px 0 #B48A00, 0 8px 16px rgba(0,0,0,0.18); transform: translateY(-2px); }
+.btn.gold:active { box-shadow: 0 0 8px rgba(255,204,0,0.35), 0 2px 0 #B48A00; transform: translateY(2px) scale(0.97); }
+.btn.blue {
+  background: var(--blue); color: #fff;
+  border: 1px solid rgba(255,255,255,0.88);
+  box-shadow: 0 0 12px rgba(26,115,232,0.45), 0 8px 20px rgba(26,115,232,0.3), 0 4px 0 #0F3A7A, 0 6px 12px rgba(0,0,0,0.15);
+}
+.btn.blue:hover { box-shadow: 0 0 20px rgba(26,115,232,0.6), 0 12px 28px rgba(26,115,232,0.4), 0 4px 0 #0F3A7A; transform: translateY(-2px); }
+.btn.blue:active { box-shadow: 0 0 8px rgba(26,115,232,0.35), 0 2px 0 #0F3A7A; transform: translateY(2px) scale(0.97); }
 
-/* WhatsApp flotante */
+/* WhatsApp flotante — neón + 3D */
 .whatsapp-float {
   position: fixed; bottom: 24px; right: 24px; z-index: 100;
   width: 58px; height: 58px; border-radius: 50%;
   background: #25D366; color: #fff;
   display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 6px 20px rgba(37,211,102,.5);
+  border: 1px solid rgba(255,255,255,0.92);
+  box-shadow: 0 0 16px rgba(37,211,102,0.5), 0 8px 22px rgba(37,211,102,0.38), 0 4px 0 #1A8A2E, 0 6px 14px rgba(0,0,0,0.18);
   text-decoration: none;
   animation: floatpulse 2.5s ease-in-out infinite;
-  transition: transform var(--dur-press) var(--ease-out);
+  transition: transform var(--dur-press) var(--ease-out), box-shadow var(--dur-press) var(--ease-out), filter var(--dur-press) var(--ease-out);
   transform: translateZ(0);
 }
-.whatsapp-float:active { transform: scale(0.97); }
+.whatsapp-float:hover { transform: translateY(-2px) translateZ(0); box-shadow: 0 0 22px rgba(37,211,102,0.62), 0 12px 28px rgba(37,211,102,0.45), 0 4px 0 #1A8A2E; filter: brightness(1.04); }
+.whatsapp-float:active { transform: translateY(2px) scale(0.97); box-shadow: 0 0 10px rgba(37,211,102,0.35), 0 2px 0 #1A8A2E; }
+@media (hover: hover) and (pointer: fine) {
+  .whatsapp-float:hover { transform: translateY(-2px) translateZ(0); }
+}
 @keyframes floatpulse {
   0% { box-shadow: 0 0 0 0 rgba(37,211,102,.45); }
   70% { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
