@@ -30,6 +30,7 @@
   --dur-fast: 150ms;
   --dur-base: 200ms;
   --dur-slow: 300ms;
+  --dur-press: 120ms;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -132,7 +133,7 @@ header {
   align-items: center;
   gap: 8px;
   white-space: nowrap;
-  transition: background-color var(--dur-fast) var(--ease-out), transform 120ms var(--ease-out);
+  transition: background-color var(--dur-fast) var(--ease-out), transform var(--dur-press) var(--ease-out);
 }
 .cta-top:active { transform: scale(0.97); }
 .cta-top:hover { background: #1557b0; }
@@ -220,10 +221,8 @@ header {
 /* ---- Cards ---- */
 .grid { display: grid; gap: 16px; }
 /* Stagger reveal - estado inicial */
-.grid .card {
-  will-change: transform, opacity;
-}
 .grid .card[data-reveal-cards] {
+  will-change: transform, opacity;
   opacity: 0;
   transform: translateY(8px);
 }
@@ -428,7 +427,7 @@ td.strike { text-decoration: line-through; color: var(--slate-500); }
   box-shadow: 0 6px 20px rgba(37,211,102,.5);
   text-decoration: none;
   animation: floatpulse 2.5s ease-in-out infinite;
-  transition: transform 120ms var(--ease-out);
+  transition: transform var(--dur-press) var(--ease-out);
 }
 .whatsapp-float:active { transform: scale(0.97); }
 @keyframes floatpulse {
