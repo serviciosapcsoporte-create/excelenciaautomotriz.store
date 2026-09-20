@@ -44,6 +44,7 @@
 html { scroll-behavior: smooth; }
 body {
   font-family: 'Inter', system-ui, sans-serif;
+  font-display: swap;
   background: var(--bg-light);
   color: var(--dark);
   line-height: 1.6;
@@ -51,6 +52,13 @@ body {
 }
 .text-balance { text-wrap: balance; }
 a { color: inherit; }
+
+/* ---- Focus visible (accesibilidad) ---- */
+*:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
 
 /* ---- Barra superior dorada ---- */
 .topbar {
@@ -75,6 +83,7 @@ header {
   z-index: 50;
   background: rgba(255,255,255,.85);
   backdrop-filter: blur(12px);
+  will-change: backdrop-filter;
   border-bottom: 1px solid var(--border);
 }
 .navbar {
@@ -131,7 +140,9 @@ header {
   align-items: center;
   gap: 8px;
   white-space: nowrap;
+  transition: background-color var(--dur-fast) var(--ease-out), transform 120ms var(--ease-out);
 }
+.cta-top:active { transform: scale(0.97); }
 .cta-top:hover { background: #1557b0; }
 .cta-top.wa { background: #25D366; }
 .cta-top.wa:hover { background: #1eb857; }
@@ -157,7 +168,7 @@ header {
   font-size: clamp(1.9rem, 4.5vw, 3rem);
   font-weight: 800;
   letter-spacing: -.02em;
-  line-height: 1.15;
+  line-height: 1.1;
   max-width: 720px;
   text-wrap: balance;
 }
@@ -179,6 +190,10 @@ header {
   font-weight: 600;
 }
 .stat svg { color: var(--emerald); flex-shrink: 0; }
+.stat { transition: transform var(--dur-fast) var(--ease-out); }
+@media (hover: hover) and (pointer: fine) {
+  .stat:hover { transform: scale(1.03); }
+}
 .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center; }
 
 /* Batería 3D */
@@ -191,9 +206,11 @@ header {
   box-shadow: 0 24px 64px rgba(15,23,42,.18);
   border: 1px solid rgba(255,255,255,.6);
   filter: saturate(1.08) contrast(1.04);
-  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out), clip-path 700ms var(--ease-out);
+  clip-path: inset(0 0 0 0);
 }
-.battery-wrap.scrolled .battery-img { opacity: .25; transform: scale(.97); }
+.battery-img[data-reveal] { clip-path: inset(0 100% 0 0); }
+.battery-wrap.scrolled .battery-img { opacity: .35; transform: scale(.97); }
 
 /* ---- Section ---- */
 .section { max-width: 1280px; margin: 0 auto; padding: 40px 24px; }
@@ -218,6 +235,11 @@ header {
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 20px;
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+@media (hover: hover) and (pointer: fine) {
+  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
 }
 .card.gold { border-color: rgba(255,204,0,.6); }
 .card.dark { background: #1E293B; border-color: rgba(255,255,255,.08); color: #fff; }
@@ -338,6 +360,7 @@ td.strike { text-decoration: line-through; color: var(--slate-500); }
   font-size: 15px; font-weight: 700; text-decoration: none;
   transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
 }
+.btn:active { transform: scale(0.97); }
 .btn:hover { transform: translateY(-1px); }
 @media (hover: hover) and (pointer: fine) {
   .btn:hover { transform: translateY(-1px); }
@@ -356,7 +379,9 @@ td.strike { text-decoration: line-through; color: var(--slate-500); }
   box-shadow: 0 6px 20px rgba(37,211,102,.5);
   text-decoration: none;
   animation: floatpulse 2.5s ease-in-out infinite;
+  transition: transform 120ms var(--ease-out);
 }
+.whatsapp-float:active { transform: scale(0.92); }
 @keyframes floatpulse {
   0% { box-shadow: 0 0 0 0 rgba(37,211,102,.45); }
   70% { box-shadow: 0 0 0 14px rgba(37,211,102,0); }

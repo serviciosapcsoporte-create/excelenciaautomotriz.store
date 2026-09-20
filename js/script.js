@@ -60,7 +60,21 @@ function waLink(msg) {
   return `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
 }
 
-// --- Batería 3D: fade al hacer scroll ---
+// --- Batería 3D: clip-path reveal + fade al hacer scroll ---
+  // Reveal hero con clip-path (sin penalizar LCP)
+  const batteryImg = document.querySelector('.battery-img');
+  if (batteryImg) {
+    batteryImg.setAttribute('data-reveal','');
+    // Fuerza reflow antes de revelar para que transicione
+    void batteryImg.offsetWidth;
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => batteryImg.removeAttribute('data-reveal'));
+    });
+    // Fallback si JS bloqueado: quita tras 50ms
+    setTimeout(() => batteryImg.removeAttribute('data-reveal'), 50);
+  }
+
+  // --- Batería 3D: fade al hacer scroll ---
 document.addEventListener('DOMContentLoaded', () => {
   const bw = document.querySelector('.battery-wrap');
   if (bw) {
