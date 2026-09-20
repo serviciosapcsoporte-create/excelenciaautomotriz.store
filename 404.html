@@ -333,6 +333,12 @@ header {
 .card .tag.red { background: rgba(220,38,38,.1); color: var(--red); }
 .card .tag.green { background: rgba(16,185,129,.1); color: #047857; }
 
+/* Por marca — 4 columnas laterales cuadradas (consistencia visual con #cobertura) */
+#marcas .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+#marcas .card { aspect-ratio: 1 / 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 16px; }
+#marcas .card .tag { margin-bottom: 6px; }
+@media (max-width: 900px) { #marcas .grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); } }
+
 /* Cobertura — acordeón + grid 4 columnas lateral (igual que #marcas) */
 .cov-accordion { border: 1px solid var(--border); border-radius: 14px; margin-top: 14px; overflow: hidden; background: #fff; }
 .cov-accordion:first-of-type { margin-top: 8px; }
