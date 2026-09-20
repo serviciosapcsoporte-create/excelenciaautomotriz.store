@@ -206,6 +206,19 @@ header {
 
 /* ---- Cards ---- */
 .grid { display: grid; gap: 16px; }
+/* Stagger reveal - estado inicial */
+.grid .card {
+  will-change: transform, opacity;
+}
+.grid .card[data-reveal-cards] {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.grid .card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
 .grid-4 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
@@ -236,7 +249,23 @@ header {
 .card .tag.green { background: rgba(16,185,129,.1); color: #047857; }
 
 /* ---- Tabla de precios ---- */
-.table-wrap { overflow-x: auto; border-radius: 16px; border: 1px solid var(--border); background: #fff; }
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  mask-image: linear-gradient(to right, black calc(100% - 24px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black calc(100% - 24px), transparent 100%);
+}
+.table-wrap.is-at-end {
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+.table-wrap table {
+  scroll-snap-align: start;
+}
 table { width: 100%; border-collapse: collapse; min-width: 720px; }
 thead th {
   background: var(--dark); color: var(--gold);
@@ -322,7 +351,28 @@ td.strike { text-decoration: line-through; color: var(--slate-500); }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary .chev { transition: transform var(--dur-base) var(--ease-out); color: var(--blue); flex-shrink: 0; }
 .faq-item[open] summary .chev { transform: rotate(180deg); }
-.faq-item .faq-body { padding: 0 16px 14px; color: var(--slate-600); font-size: 14px; }
+.faq-item .faq-body {
+  padding: 0 16px 14px;
+  color: var(--slate-600);
+  font-size: 14px;
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out), padding var(--dur-base) var(--ease-out);
+  overflow: hidden;
+}
+.faq-item .faq-body > div {
+  overflow: hidden;
+}
+.faq-item[open] .faq-body {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  padding: 0 16px 14px;
+}
+.faq-item:not([open]) .faq-body {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
 /* ---- CTA ---- */
 .cta-banner {
@@ -434,6 +484,9 @@ footer a:hover { color: var(--gold); }
   .battery-img,
   .btn,
   .map-pin,
-  .faq-item summary .chev { transition-duration: 0.01s !important; }
+  .faq-item summary .chev,
+  .grid .card,
+  .faq-item .faq-body { transition-duration: 0.01s !important; }
+  .grid .card[data-reveal-cards] { opacity: 1 !important; transform: none !important; }
   html { scroll-behavior: auto; }
 }
