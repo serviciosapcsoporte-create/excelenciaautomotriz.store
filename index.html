@@ -168,48 +168,80 @@ header {
 .cta-top.wa { background: #25D366; }
 .cta-top.wa:hover { background: #1eb857; }
 
-/* ---- Hero ---- */
+/* ---- Hero — video fullscreen + contenido centrado (emil-design-eng) ---- */
 .hero {
   position: relative;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 48px 24px 40px;
+  min-height: 92vh;
+  display: grid;
+  place-items: center;
+  padding: 72px 24px 64px;
   overflow: hidden;
+  max-width: none;
+  margin: 0;
+  background: var(--dark);
+  isolation: isolate;
 }
-.hero-blob {
+.hero-blob { display: none; }
+.hero-video {
   position: absolute;
-  top: -80px; right: -80px;
-  width: 420px; height: 420px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(26,115,232,.05), rgba(255,204,0,.10));
-  filter: blur(60px);
-  pointer-events: none;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  filter: saturate(1.08) contrast(1.04);
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15,23,42,0.52) 0%, rgba(15,23,42,0.78) 100%);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hero h1 {
-  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  font-size: clamp(1.95rem, 5vw, 3.25rem);
   font-weight: 800;
   letter-spacing: -.02em;
-  line-height: 1.1;
+  line-height: 1.07;
   max-width: 720px;
   text-wrap: balance;
+  color: #fff;
   transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out), filter 300ms var(--ease-out);
 }
-.hero h1 .hl { color: var(--blue); }
+.hero h1 .hl { color: var(--gold); }
 .hero h1[data-hero] { opacity: 0; transform: translateY(6px); filter: blur(2px); }
 .hero h1.is-visible { opacity: 1; transform: none; filter: none; }
 .hero .sub {
-  margin-top: 14px;
+  margin-top: 16px;
   font-size: 17px;
-  color: var(--slate-600);
+  color: #E2E8F0;
   max-width: 620px;
+  text-wrap: balance;
   transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out), filter 300ms var(--ease-out);
   transition-delay: 60ms;
 }
 .hero .sub[data-hero] { opacity: 0; transform: translateY(6px); filter: blur(2px); }
 .hero .sub.is-visible { opacity: 1; transform: none; filter: none; }
-.hero .stats { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 22px; transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out), filter 300ms var(--ease-out); transition-delay: 120ms; }
+.hero .stats { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; justify-content: center; transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out), filter 300ms var(--ease-out); transition-delay: 120ms; }
 .hero .stats[data-hero] { opacity: 0; transform: translateY(6px); filter: blur(2px); }
 .hero .stats.is-visible { opacity: 1; transform: none; filter: none; }
+.hero .stats .stat {
+  background: rgba(255,255,255,0.13);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
 .stat {
   display: flex; align-items: center; gap: 8px;
   background: #fff;
@@ -220,14 +252,15 @@ header {
   font-weight: 600;
 }
 .stat svg { color: var(--emerald); flex-shrink: 0; }
+.hero .stats .stat svg { color: #86EFAC; }
 .stat { transition: transform var(--dur-fast) var(--ease-out); }
 @media (hover: hover) and (pointer: fine) {
   .stat:hover { transform: scale(1.03); }
 }
-.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center; }
-
-/* Batería 3D */
-.battery-wrap { position: relative; display: flex; justify-content: center; align-items: center; }
+.hero-grid { display: contents; }
+/* Compatibilidad: si queda .battery-wrap legacy, ocultarlo en hero nuevo */
+.hero .battery-wrap { display: none; }
+/* Fallback para video como battery-img legacy */
 .battery-img {
   width: 100%;
   max-width: 560px;
@@ -542,6 +575,7 @@ footer a:hover { color: var(--gold); }
   .brand-sub .dot,
   .whatsapp-float { animation: none !important; }
   .battery-img,
+  .hero-video,
   .btn,
   .map-pin,
   .faq-item summary .chev,
@@ -553,6 +587,7 @@ footer a:hover { color: var(--gold); }
   .hero h1[data-hero],
   .hero .sub[data-hero],
   .hero .stats[data-hero] { opacity: 1 !important; transform: none !important; filter: none !important; }
+  .hero-video { animation: none !important; }
   html { scroll-behavior: auto; }
 }
 @media (prefers-reduced-transparency: reduce) {
@@ -702,28 +737,23 @@ footer a:hover { color: var(--gold); }
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero — video fullscreen + contenido centrado (emil-design-eng) -->
   <section class="hero">
-    <div class="hero-blob"></div>
-    <div class="hero-grid">
-      <div>
-        <h1 data-hero>Batería <span class="hl">Willard Extrema</span> a Domicilio en Bogotá en <span class="hl">30 minutos</span></h1>
-        <p class="sub" data-hero>Instalación gratis, recogemos tu batería usada y aplicamos descuento. Garantía real de 12 meses. El precio más bajo de Bogotá.</p>
-        <div class="stats" data-hero>
-          <span class="stat">💳 Pago contra entrega</span>
-          <span class="stat">🚚 31 zonas</span>
-          <span class="stat">🛡️ Garantía 12 meses</span>
-        </div>
-        <a class="btn wa mt-4" href="https://wa.me/573204420417?text=Hola%20Excelencia%2C%20cotizo%20bater%C3%ADa%20Willard">
-          Cotizar por WhatsApp → 3204420417
-        </a>
+    <video class="hero-video" autoplay loop muted playsinline preload="metadata" poster="img/bateria-3d-660.webp" aria-hidden="true">
+      <source src="img/hero-battery.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1 data-hero>Batería <span class="hl">Willard Extrema</span> a Domicilio en Bogotá en <span class="hl">30 minutos</span></h1>
+      <p class="sub" data-hero>Instalación gratis, recogemos tu batería usada y aplicamos descuento. Garantía real de 12 meses. El precio más bajo de Bogotá.</p>
+      <div class="stats" data-hero>
+        <span class="stat">💳 Pago contra entrega</span>
+        <span class="stat">🚚 31 zonas</span>
+        <span class="stat">🛡️ Garantía 12 meses</span>
       </div>
-      <div class="battery-wrap">
-        <video class="battery-img" autoplay muted loop playsinline preload="metadata" poster="img/bateria-3d-660.webp" width="660" height="440" aria-label="Batería Willard Extrema a domicilio Bogotá">
-          <source src="img/hero-battery.mp4" type="video/mp4">
-          <img src="img/bateria-3d-660.webp" srcset="img/bateria-3d-378.webp 378w, img/bateria-3d-660.webp 660w" sizes="(min-width:600px) 560px, 92vw" width="660" height="440" alt="Batería Willard Extrema a domicilio Bogotá" loading="eager" decoding="async">
-        </video>
-      </div>
+      <a class="btn wa mt-4" href="https://wa.me/573204420417?text=Hola%20Excelencia%2C%20cotizo%20bater%C3%ADa%20Willard">
+        Cotizar por WhatsApp → 3204420417
+      </a>
     </div>
   </section>
 

@@ -76,11 +76,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (reduce) {
       heroEls.forEach(el => { el.classList.add('is-visible'); });
     } else {
-      // forza reflow y activa en siguiente frame para que transicione
       void document.querySelector('.hero').offsetWidth;
       requestAnimationFrame(() => {
         requestAnimationFrame(() => heroEls.forEach(el => el.classList.add('is-visible')));
       });
+    }
+  }
+  // Pausar video hero si reduce motion
+  const heroVideo = document.querySelector('.hero-video');
+  if (heroVideo) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      heroVideo.pause();
+      heroVideo.removeAttribute('autoplay');
+    } else {
+      heroVideo.play().catch(()=>{});
     }
   }
 
