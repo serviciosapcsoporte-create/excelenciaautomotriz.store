@@ -342,6 +342,19 @@ header {
 .card .tag.red { background: rgba(220,38,38,.1); color: var(--red); }
 .card .tag.green { background: rgba(16,185,129,.1); color: #047857; }
 
+/* Cobertura grid compacto + clusters H3 regionales */
+#cobertura .cov-group { margin-top: 28px; }
+#cobertura .cov-group:first-of-type { margin-top: 8px; }
+#cobertura .cov-group h3 { font-size: 13px; font-weight: 800; letter-spacing: .02em; color: var(--dark); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; text-transform: uppercase; }
+#cobertura .cov-group h3::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
+#cobertura .grid { gap: 12px; }
+#cobertura .card { padding: 14px 16px; border-radius: 12px; }
+#cobertura .card h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+#cobertura .card p { font-size: 13px; }
+#por-que-comprar .card h4 { font-size: 15px; font-weight: 800; margin-bottom: 6px; letter-spacing: -.01em; }
+#por-que-comprar .card p { font-size: 14px; }
+@media (max-width: 600px) { #cobertura .grid.grid-4 { grid-template-columns: repeat(2, 1fr); } }
+
 /* ---- Tabla de precios ---- */
 .table-wrap {
   overflow-x: auto;
@@ -846,45 +859,85 @@ footer a:hover { color: var(--gold); }
     </div>
   </section>
 
-  <!-- Cobertura por localidad (SEO local estatico) -->
+  <!-- Cobertura por localidad (SEO local estatico) — grid compacto + clusters H3 regionales -->
   <section class="section" id="cobertura">
     <div class="section-header">
       <span class="kicker">BATERÍA A DOMICILIO POR ZONA</span>
       <h2>Baterías Willard a domicilio en las 31 zonas de Bogotá y Cundinamarca</h2>
       <p>Cobertura 24 horas en toda la ciudad. Elige tu zona y pide tu batería Willard por WhatsApp 3204420417: llegamos en 30 minutos con instalación y recogida de tu batería usada.</p>
     </div>
-    <div class="grid grid-4">
-      <div class="card"><a href="localidades/usaquen.html"><h3>Batería a domicilio Usaquén</h3></a><p>Norte · Willard 31H/1250</p></div>
-      <div class="card"><a href="localidades/suba.html"><h3>Batería a domicilio Suba</h3></a><p>Norte-Occidente · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/chapinero.html"><h3>Batería a domicilio Chapinero</h3></a><p>Norte · Willard 27/1000</p></div>
-      <div class="card"><a href="localidades/barrios-unidos.html"><h3>Batería a domicilio Barrios Unidos</h3></a><p>Centro-Norte · Willard NS40/560</p></div>
-      <div class="card"><a href="localidades/kennedy.html"><h3>Batería a domicilio Kennedy</h3></a><p>Occidente · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/engativa.html"><h3>Batería a domicilio Engativá</h3></a><p>Occidente · Willard NS40/560</p></div>
-      <div class="card"><a href="localidades/fontibon.html"><h3>Batería a domicilio Fontibón</h3></a><p>Occidente · Willard 42/850</p></div>
-      <div class="card"><a href="localidades/bosa.html"><h3>Batería a domicilio Bosa</h3></a><p>Occidente-Sur · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/ciudad-bolivar.html"><h3>Batería a domicilio Ciudad Bolívar</h3></a><p>Sur · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/san-cristobal.html"><h3>Batería a domicilio San Cristóbal</h3></a><p>Sur · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/usme.html"><h3>Batería a domicilio Usme</h3></a><p>Sur Extremo · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/tunjuelito.html"><h3>Batería a domicilio Tunjuelito</h3></a><p>Sur · Willard NS40/560</p></div>
-      <div class="card"><a href="localidades/rafael-uribe.html"><h3>Batería a domicilio Rafael Uribe</h3></a><p>Sur · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/antonio-narino.html"><h3>Batería a domicilio Antonio Nariño</h3></a><p>Sur · Willard NS40/560</p></div>
-      <div class="card"><a href="localidades/teusaquillo.html"><h3>Batería a domicilio Teusaquillo</h3></a><p>Centro · Willard NS40/560</p></div>
-      <div class="card"><a href="localidades/la-candelaria.html"><h3>Batería a domicilio La Candelaria</h3></a><p>Centro · Willard NS40/560</p></div>
-      <div class="card"><a href="puente-aranda.html"><h3>Batería a domicilio Puente Aranda</h3></a><p>Centro-Sur · Willard 42/850</p></div>
-      <div class="card"><a href="localidades/santa-fe.html"><h3>Batería a domicilio Santa Fe</h3></a><p>Oriente · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/soacha.html"><h3>Batería a domicilio Soacha</h3></a><p>Cundinamarca · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/chia.html"><h3>Batería a domicilio Chía / Cajicá</h3></a><p>Cundinamarca Norte · Willard 31H/1250</p></div>
-      <div class="card"><a href="localidades/los-martires.html"><h3>Batería a domicilio Los Mártires</h3></a><p>Centro · Willard NS40/560</p></div>
-      <div class="card"><a href="localidades/mosquera.html"><h3>Batería a domicilio Mosquera</h3></a><p>Cundinamarca Occidente · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/funza.html"><h3>Batería a domicilio Funza</h3></a><p>Cundinamarca Occidente · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/madrid.html"><h3>Batería a domicilio Madrid</h3></a><p>Cundinamarca Occidente · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/el-rosal.html"><h3>Batería a domicilio El Rosal</h3></a><p>Cundinamarca Occidente · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/cota.html"><h3>Batería a domicilio Cota</h3></a><p>Cundinamarca Norte · Willard 31H/1250</p></div>
-      <div class="card"><a href="localidades/zipaquira.html"><h3>Batería a domicilio Zipaquirá</h3></a><p>Cundinamarca Norte · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/sopo.html"><h3>Batería a domicilio Sopó</h3></a><p>Cundinamarca Norte · Willard 42/850</p></div>
-      <div class="card"><a href="localidades/tenjo.html"><h3>Batería a domicilio Tenjo</h3></a><p>Cundinamarca Norte · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/tabio.html"><h3>Batería a domicilio Tabio</h3></a><p>Cundinamarca Norte · Willard 36/750</p></div>
-      <div class="card"><a href="localidades/la-calera.html"><h3>Batería a domicilio La Calera</h3></a><p>Cundinamarca Oriente · Willard 36/750</p></div>
+    <div class="cov-group">
+      <h3>Bogotá Norte — 4 zonas</h3>
+      <div class="grid grid-4">
+        <div class="card"><a href="localidades/usaquen.html"><h4>Batería a domicilio Usaquén</h4></a><p>Norte · Willard 31H/1250</p></div>
+        <div class="card"><a href="localidades/suba.html"><h4>Batería a domicilio Suba</h4></a><p>Norte-Occidente · Willard 36/750</p></div>
+        <div class="card"><a href="localidades/chapinero.html"><h4>Batería a domicilio Chapinero</h4></a><p>Norte · Willard 27/1000</p></div>
+        <div class="card"><a href="localidades/barrios-unidos.html"><h4>Batería a domicilio Barrios Unidos</h4></a><p>Centro-Norte · Willard NS40/560</p></div>
+      </div>
+    </div>
+    <div class="cov-group">
+      <h3>Bogotá Occidente — 4 zonas</h3>
+      <div class="grid grid-4">
+        <div class="card"><a href="localidades/kennedy.html"><h4>Batería a domicilio Kennedy</h4></a><p>Occidente · Willard 36/750</p></div>
+        <div class="card"><a href="localidades/engativa.html"><h4>Batería a domicilio Engativá</h4></a><p>Occidente · Willard NS40/560</p></div>
+        <div class="card"><a href="localidades/fontibon.html"><h4>Batería a domicilio Fontibón</h4></a><p>Occidente · Willard 42/850</p></div>
+        <div class="card"><a href="localidades/bosa.html"><h4>Batería a domicilio Bosa</h4></a><p>Occidente-Sur · Willard 36/750</p></div>
+      </div>
+    </div>
+    <div class="cov-group">
+      <h3>Bogotá Sur — 6 zonas</h3>
+      <div class="grid grid-4">
+        <div class="card"><a href="localidades/ciudad-bolivar.html"><h4>Batería a domicilio Ciudad Bolívar</h4></a><p>Sur · Willard 36/750</p></div>
+        <div class="card"><a href="localidades/san-cristobal.html"><h4>Batería a domicilio San Cristóbal</h4></a><p>Sur · Willard 36/750</p></div>
+        <div class="card"><a href="localidades/usme.html"><h4>Batería a domicilio Usme</h4></a><p>Sur Extremo · Willard 36/750</p></div>
+        <div class="card"><a href="localidades/tunjuelito.html"><h4>Batería a domicilio Tunjuelito</h4></a><p>Sur · Willard NS40/560</p></div>
+        <div class="card"><a href="localidades/rafael-uribe.html"><h4>Batería a domicilio Rafael Uribe</h4></a><p>Sur · Willard 36/750</p></div>
+        <div class="card"><a href="localidades/antonio-narino.html"><h4>Batería a domicilio Antonio Nariño</h4></a><p>Sur · Willard NS40/560</p></div>
+      </div>
+    </div>
+    <div class="cov-group">
+      <h3>Bogotá Centro — 5 zonas</h3>
+      <div class="grid grid-4">
+        <div class="card"><a href="localidades/teusaquillo.html"><h4>Batería a domicilio Teusaquillo</h4></a><p>Centro · Willard NS40/560</p></div>
+        <div class="card"><a href="localidades/la-candelaria.html"><h4>Batería a domicilio La Candelaria</h4></a><p>Centro · Willard NS40/560</p></div>
+        <div class="card"><a href="puente-aranda.html"><h4>Batería a domicilio Puente Aranda</h4></a><p>Centro-Sur · Willard 42/850</p></div>
+        <div class="card"><a href="localidades/santa-fe.html"><h4>Batería a domicilio Santa Fe</h4></a><p>Oriente · Willard 36/750</p></div>
+        <div class="card"><a href="localidades/los-martires.html"><h4>Batería a domicilio Los Mártires</h4></a><p>Centro · Willard NS40/560</p></div>
+      </div>
+    </div>
+    <div class="cov-group">
+      <h3>Cundinamarca — 12 zonas</h3>
+      <div class="grid grid-4">
+        <div class="card"><a href="localidades/soacha.html"><h4>Batería a domicilio Soacha</h4></a><p>Cundinamarca · Willard 36/750</p></div>
+        <div class="card"><a href="localidades/chia.html"><h4>Batería a domicilio Chía / Cajicá</h4></a><p>Cundinamarca Norte · Willard 31H/1250</p></div>
+        <div class="card"><a href="localidades/mosquera.html"><h4>Batería a domicilio Mosquera</h4></a><p>Cundinamarca Occidente · Willard 36/750</p></div>
+        <div class="card"><a href="localidades/funza.html"><h4>Batería a domicilio Funza</h4></a><p>Cundinamarca Occidente · Willard 36/750</p></div>
+        <div class="card"><a href="localidades/madrid.html"><h4>Batería a domicilio Madrid</h4></a><p>Cundinamarca Occidente · Willard 36/750</p></div>
+        <div class="card"><a href="localidades/el-rosal.html"><h4>Batería a domicilio El Rosal</h4></a><p>Cundinamarca Occidente · Willard 36/750</p></div>
+        <div class="card"><a href="localidades/cota.html"><h4>Batería a domicilio Cota</h4></a><p>Cundinamarca Norte · Willard 31H/1250</p></div>
+        <div class="card"><a href="localidades/zipaquira.html"><h4>Batería a domicilio Zipaquirá</h4></a><p>Cundinamarca Norte · Willard 36/750</p></div>
+        <div class="card"><a href="localidades/sopo.html"><h4>Batería a domicilio Sopó</h4></a><p>Cundinamarca Norte · Willard 42/850</p></div>
+        <div class="card"><a href="localidades/tenjo.html"><h4>Batería a domicilio Tenjo</h4></a><p>Cundinamarca Norte · Willard 36/750</p></div>
+        <div class="card"><a href="localidades/tabio.html"><h4>Batería a domicilio Tabio</h4></a><p>Cundinamarca Norte · Willard 36/750</p></div>
+        <div class="card"><a href="localidades/la-calera.html"><h4>Batería a domicilio La Calera</h4></a><p>Cundinamarca Oriente · Willard 36/750</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por qué comprar con nosotros — 6 H4 con resumen de artículos -->
+  <section class="section" id="por-que-comprar">
+    <div class="section-header">
+      <span class="kicker">POR QUÉ COMPRAR CON NOSOTROS</span>
+      <h2>Por qué comprar tu batería Willard con Excelencia Automotriz</h2>
+      <p>Distribuidor Willard Extrema oficial. Precio transparente, garantía real y servicio 30 minutos. Resúmenes de nuestras guías completas.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><h4>Garantía 12 meses real</h4><p>Cambio inmediato Willard 12 meses sin letra pequeña. Vida útil 2-4 años según uso y cuidados en Bogotá.</p><a href="blog/cuanto-dura-una-bateria-willard.html" class="text-sm text-blue font-bold">Ver garantía →</a></div>
+      <div class="card"><h4>Precio transparente con usada</h4><p>Tabla 2026 desde $230.000 con usada hasta $790.000 camión, con instalación incluida. Sin sorpresas.</p><a href="blog/precios-baterias-willard-bogota-2026.html" class="text-sm text-blue font-bold">Ver precios →</a></div>
+      <div class="card"><h4>30 minutos a domicilio 24h</h4><p>Desde Cra. 56 #14-56, Puente Aranda, llegamos en 30 min promedio. Emergencias 24 horas toda Bogotá.</p><a href="blog/bateria-carro-24-horas-bogota.html" class="text-sm text-blue font-bold">Ver servicio 24h →</a></div>
+      <div class="card"><h4>Asesoría por modelo</h4><p>Confirmamos referencia exacta por placa antes de enviar: Hilux, Tucson, Sportage, Duster y más.</p><a href="blog/bateria-para-tu-carro-segun-modelo.html" class="text-sm text-blue font-bold">Ver guía por modelo →</a></div>
+      <div class="card"><h4>Cobertura real en el sur</h4><p>Únicos con Willard oficial en Ciudad Bolívar y 30 zonas más. Envío e instalación gratis.</p><a href="blog/bateria-de-carro-ciudad-bolivar.html" class="text-sm text-blue font-bold">Ver cobertura sur →</a></div>
+      <div class="card"><h4>Confianza vs mitos</h4><p>Desmentimos mercado negro y duración con datos técnicos Willard. Distribuidor oficial.</p><a href="blog/mitos-y-realidades-baterias-willard.html" class="text-sm text-blue font-bold">Ver mitos →</a></div>
     </div>
   </section>
 

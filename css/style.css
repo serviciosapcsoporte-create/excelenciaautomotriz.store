@@ -320,6 +320,19 @@ header {
 .card .tag.red { background: rgba(220,38,38,.1); color: var(--red); }
 .card .tag.green { background: rgba(16,185,129,.1); color: #047857; }
 
+/* Cobertura grid compacto + clusters H3 regionales */
+#cobertura .cov-group { margin-top: 28px; }
+#cobertura .cov-group:first-of-type { margin-top: 8px; }
+#cobertura .cov-group h3 { font-size: 13px; font-weight: 800; letter-spacing: .02em; color: var(--dark); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; text-transform: uppercase; }
+#cobertura .cov-group h3::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
+#cobertura .grid { gap: 12px; }
+#cobertura .card { padding: 14px 16px; border-radius: 12px; }
+#cobertura .card h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+#cobertura .card p { font-size: 13px; }
+#por-que-comprar .card h4 { font-size: 15px; font-weight: 800; margin-bottom: 6px; letter-spacing: -.01em; }
+#por-que-comprar .card p { font-size: 14px; }
+@media (max-width: 600px) { #cobertura .grid.grid-4 { grid-template-columns: repeat(2, 1fr); } }
+
 /* ---- Tabla de precios ---- */
 .table-wrap {
   overflow-x: auto;
