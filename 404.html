@@ -272,6 +272,7 @@ header {
   scroll-snap-type: x proximity;
   mask-image: linear-gradient(to right, black calc(100% - 24px), transparent 100%);
   -webkit-mask-image: linear-gradient(to right, black calc(100% - 24px), transparent 100%);
+  transition: mask-image var(--dur-base) var(--ease-out), -webkit-mask-image var(--dur-base) var(--ease-out);
 }
 .table-wrap.is-at-end {
   mask-image: none;
