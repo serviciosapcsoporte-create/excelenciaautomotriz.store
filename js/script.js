@@ -82,6 +82,49 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+  // --- Vehicle Search Widget (emil-design-eng) — Marca → Modelo → WhatsApp ---
+  (function(){
+    const marcaSel = document.getElementById('vs-marca');
+    const modeloSel = document.getElementById('vs-modelo');
+    const cta = document.getElementById('vs-cta');
+    if (!marcaSel || !modeloSel || !cta) return;
+    const DATA = {
+      "Toyota": { modelos: ["Hilux","Corolla","Corolla Cross","Prado","Fortuner"], ref: "27/1000" },
+      "Chevrolet": { modelos: ["Spark","Onix","Captiva","Sail","Tracker"], ref: "36/750" },
+      "Mazda": { modelos: ["Mazda 3","CX-30","CX-5","BT-50"], ref: "34/1000" },
+      "Hyundai": { modelos: ["Tucson","Accent","Elantra","Santa Fe"], ref: "31H/1250" },
+      "Kia": { modelos: ["Sportage","Picanto","Rio","Cerato"], ref: "36/750" },
+      "Renault": { modelos: ["Duster","Sandero","Logan","Kwid"], ref: "42/850" }
+    };
+    const populateModelo = (marca) => {
+      modeloSel.innerHTML = '<option value="">Modelo</option>';
+      modeloSel.disabled = !marca;
+      cta.disabled = true;
+      if (!marca || !DATA[marca]) return;
+      DATA[marca].modelos.forEach(m => {
+        const o = document.createElement('option');
+        o.value = m; o.textContent = m;
+        modeloSel.appendChild(o);
+      });
+      modeloSel.focus();
+    };
+    marcaSel.addEventListener('change', () => {
+      populateModelo(marcaSel.value);
+    });
+    modeloSel.addEventListener('change', () => {
+      cta.disabled = !modeloSel.value;
+      if (!cta.disabled) cta.focus();
+    });
+    cta.addEventListener('click', () => {
+      const marca = marcaSel.value;
+      const modelo = modeloSel.value;
+      if (!marca || !modelo) return;
+      const ref = (DATA[marca] && DATA[marca].ref) || '36/750';
+      const msg = `Hola Excelencia, cotizo batería Willard ${ref} para mi ${marca} ${modelo}`;
+      window.open(waLink(msg), '_blank');
+    });
+  })();
+
   // Pausar video hero si reduce motion
   const heroVideo = document.querySelector('.hero-video');
   if (heroVideo) {

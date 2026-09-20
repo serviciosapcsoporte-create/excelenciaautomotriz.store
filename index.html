@@ -243,6 +243,44 @@ header {
 .hero .stats { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; justify-content: center; transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out), filter 300ms var(--ease-out); transition-delay: 120ms; }
 .hero .stats[data-hero] { opacity: 0; transform: translateY(6px); filter: blur(2px); }
 .hero .stats.is-visible { opacity: 1; transform: none; filter: none; }
+/* Vehicle Search — widget flotante neón (emil-design-eng) */
+.vehicle-search { margin-top: 18px; width: 100%; max-width: 720px; transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out), filter 300ms var(--ease-out); transition-delay: 90ms; }
+.vehicle-search[data-hero] { opacity: 0; transform: translateY(6px); filter: blur(2px); }
+.vehicle-search.is-visible { opacity: 1; transform: none; filter: none; }
+.vehicle-search-kicker { font-size: 12px; font-weight: 700; letter-spacing: .02em; color: #E2E8F0; text-align: center; margin-bottom: 8px; }
+.vehicle-search-bar {
+  display: flex; align-items: center; gap: 10px;
+  background: rgba(15,23,42,0.88);
+  border: 1px solid rgba(0,243,255,0.28);
+  border-radius: 999px;
+  padding: 8px;
+  box-shadow: 0 0 15px rgba(0,243,255,0.30), 0 8px 24px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.vs-field { flex: 1 1 0; min-width: 0; }
+.vs-field select {
+  width: 100%; height: 42px; padding: 0 32px 0 14px;
+  border-radius: 999px; border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23E2E8F0' d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 12px center;
+  color: #fff; font-size: 14px; font-weight: 600;
+  appearance: none; -webkit-appearance: none;
+  outline: none; cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out);
+}
+.vs-field select:focus { border-color: #00f3ff; background-color: rgba(255,255,255,0.12); box-shadow: 0 0 0 3px rgba(0,243,255,0.22); }
+.vs-field select:disabled { opacity: 0.55; cursor: not-allowed; }
+.vs-field select option { color: #0F172A; }
+.vs-cta { margin-top: 0 !important; white-space: nowrap; flex-shrink: 0; height: 42px; padding: 0 18px; font-size: 14px; }
+.vs-cta:disabled { opacity: 0.55; cursor: not-allowed; filter: grayscale(0.2); box-shadow: none !important; animation: none !important; }
+@media (max-width: 700px) {
+  .vehicle-search-bar { flex-direction: column; border-radius: 16px; padding: 10px; }
+  .vs-field, .vs-cta { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vehicle-search { transition-duration: 0.01s !important; }
+  .vehicle-search-bar { box-shadow: none !important; }
+}
 .hero .stats .stat {
   background: rgba(255,255,255,0.13);
   border: 1px solid rgba(255,255,255,0.22);
@@ -813,8 +851,30 @@ footer a:hover { color: var(--gold); }
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
       <h1 data-hero>Batería <span class="hl">Willard Extrema</span> a Domicilio en Bogotá en <span class="hl">30 minutos</span></h1>
-      <p class="sub" data-hero>Instalación gratis, recogemos tu batería usada y aplicamos descuento. Garantía real de 12 meses. El precio más bajo de Bogotá.</p>
-      <div class="stats" data-hero>
+        <div class="vehicle-search" data-hero>
+          <p class="vehicle-search-kicker">Encuentra la batería exacta para tu vehículo en 10 segundos</p>
+          <div class="vehicle-search-bar">
+            <div class="vs-field">
+              <select id="vs-marca" aria-label="Marca del vehículo">
+                <option value="">Marca</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Mazda">Mazda</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Kia">Kia</option>
+                <option value="Renault">Renault</option>
+              </select>
+            </div>
+            <div class="vs-field">
+              <select id="vs-modelo" aria-label="Modelo del vehículo" disabled>
+                <option value="">Modelo</option>
+              </select>
+            </div>
+            <button id="vs-cta" class="btn wa vs-cta" disabled>Ver Precio y Cotizar en WhatsApp</button>
+          </div>
+        </div>
+        <p class="sub" data-hero>Instalación gratis, recogemos tu batería usada y aplicamos descuento. Garantía real de 12 meses. El precio más bajo de Bogotá.</p>
+        <div class="stats" data-hero>
         <span class="stat">💳 Pago contra entrega</span>
         <span class="stat">🚚 31 zonas</span>
         <span class="stat">🛡️ Garantía 12 meses</span>
