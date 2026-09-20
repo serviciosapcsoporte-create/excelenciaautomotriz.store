@@ -406,6 +406,27 @@ header {
 #por-que-comprar .card h4 { font-size: 15px; font-weight: 800; margin-bottom: 6px; letter-spacing: -.01em; }
 #por-que-comprar .card p { font-size: 14px; }
 
+/* Nuestros Beneficios — grid 6 columnas + neón oscuro */
+#beneficios .section-header h2 { text-align: center; }
+.beneficios-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
+.beneficio-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(0, 243, 255, 0.2);
+  border-radius: 16px;
+  padding: 18px 14px;
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+}
+.beneficio-card:hover { border-color: rgba(0,243,255,0.45); box-shadow: 0 0 15px rgba(0, 243, 255, 0.5), 0 8px 24px rgba(0,0,0,0.18); }
+@media (hover: hover) and (pointer: fine) {
+  .beneficio-card:hover { transform: translateY(-4px); }
+}
+.beneficio-icon { width: 48px; height: 48px; border-radius: 50%; background: rgba(0,243,255,0.08); border: 1px solid rgba(0,243,255,0.18); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.beneficio-card h3 { font-size: 13px; font-weight: 700; line-height: 1.35; color: #E2E8F0; text-align: center; }
+@media (max-width: 1024px) { .beneficios-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px) { .beneficios-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
+
 /* ---- Tabla de precios ---- */
 .table-wrap {
   overflow-x: auto;
@@ -708,15 +729,20 @@ footer a:hover { color: var(--gold); }
   .cov-accordion .chev,
   .stat,
   .grid .card,
+  .beneficio-card,
   .faq-item .faq-body,
   .cov-body { transition-duration: 0.01s !important; }
   .grid .card[data-reveal-cards] { opacity: 1 !important; transform: none !important; }
   .stat:hover { transform: none !important; }
+  .beneficio-card:hover { transform: none !important; }
   .hero h1[data-hero],
   .hero .sub[data-hero],
   .hero .stats[data-hero] { opacity: 1 !important; transform: none !important; filter: none !important; }
   .hero-video { animation: none !important; }
   html { scroll-behavior: auto; }
+}
+@media (hover: hover) and (pointer: fine) {
+  .beneficio-card:hover { transform: translateY(-4px); }
 }
 @media (prefers-reduced-transparency: reduce) {
   header { background: rgba(255,255,255,.95); backdrop-filter: none; -webkit-backdrop-filter: none; }
