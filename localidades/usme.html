@@ -62,21 +62,39 @@ a { color: inherit; }
   border-radius: 4px;
 }
 
-/* ---- Barra superior dorada ---- */
+/* ---- Barra superior dorada — marquee continuo (CSS animation off main thread) ---- */
 .topbar {
   background: var(--gold);
   color: var(--dark);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  padding: 10px 16px;
-  text-align: center;
+  padding: 10px 0;
   position: sticky;
   top: 0;
   z-index: 60;
   border-bottom: 1px solid rgba(0,0,0,.08);
+  overflow: hidden;
+  white-space: nowrap;
 }
-.topbar .tb-sep { width: 1px; height: 12px; background: rgba(0,0,0,.2); display: inline-block; margin: 0 8px; vertical-align: middle; }
+.topbar-track {
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+  will-change: transform;
+}
+.topbar .tb-sep { width: 1px; height: 12px; background: rgba(0,0,0,.2); display: inline-block; margin: 0 12px; vertical-align: middle; }
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media (hover: hover) and (pointer: fine) {
+  .topbar:hover .topbar-track { animation-play-state: paused; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .topbar-track { animation: none !important; transform: none !important; }
+}
 
 /* ---- Header ---- */
 header {
@@ -614,11 +632,19 @@ footer a:hover { color: var(--gold); }
 
   <!-- Barra superior dorada -->
   <div class="topbar">
-    <span>🚚 Domicilio 30 min GRATIS Bogotá y Cundinamarca</span>
-    <span class="tb-sep"></span>
-    <span>Desde $230.000 c/usada</span>
-    <span class="tb-sep"></span>
-    <span>12 meses garantía Willard</span>
+    <div class="topbar-track">
+      <span>🚚 Domicilio 30 min GRATIS Bogotá y Cundinamarca</span>
+      <span class="tb-sep"></span>
+      <span>Desde $230.000 c/usada</span>
+      <span class="tb-sep"></span>
+      <span>12 meses garantía Willard</span>
+      <span class="tb-sep"></span>
+      <span aria-hidden="true">🚚 Domicilio 30 min GRATIS Bogotá y Cundinamarca</span>
+      <span class="tb-sep" aria-hidden="true"></span>
+      <span aria-hidden="true">Desde $230.000 c/usada</span>
+      <span class="tb-sep" aria-hidden="true"></span>
+      <span aria-hidden="true">12 meses garantía Willard</span>
+    </div>
   </div>
 
   <!-- Header -->
