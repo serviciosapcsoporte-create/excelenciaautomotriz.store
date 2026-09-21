@@ -1202,9 +1202,9 @@ footer a:hover { color: var(--gold); }
       <p class="mt-2 text-xs">Fabricante oficial: <a href="https://bateriaswillard.com/" target="_blank" rel="noopener">Baterías Willard</a></p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer fetchpriority="low"></script>
   <script>
-  /* Service Worker cache - Excelencia Automotriz */
+  /* Service Worker cache - Excelencia Automotriz - defer para no bloquear LCP */
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
       navigator.serviceWorker.register('/sw.js').catch(function() {});
